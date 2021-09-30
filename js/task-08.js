@@ -1,4 +1,5 @@
 const boxesElement = document.querySelector('input');
+
 const renderBtn = document.querySelector('[data-action="render"]');
 const destroyBtn = document.querySelector('[data-action="destroy"]');
 
@@ -13,12 +14,13 @@ const clickHendler = () => {
 let defaultSize = 20;
 const createBoxes = (amount) => {
     const markupDiv = [];
-        
+
     for (let i = 0; i < amount; i += 1) {
         const colorR = Math.floor(Math.random() * 256);
         const colorG = Math.floor(Math.random() * 256);
         const colorB = Math.floor(Math.random() * 256);
         defaultSize += 10;
+
         const divEl = document.createElement("div");
         divEl.setAttribute('style', `width: ${defaultSize}px; height: ${defaultSize}px; background-color: rgb(${colorR},${colorG},${colorB})`);
         boxesElement.value = "";
